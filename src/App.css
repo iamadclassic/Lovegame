@@ -177,3 +177,25 @@ body {
   .spin-btn { font-size:1.7rem; padding:16px 45px; }
   .answer-box textarea { height:120px; }
 }
+.send-btn {
+  margin-top: 14px;
+  background: linear-gradient(45deg, #ff3366, #ff6699);
+  color: white;
+  border: none;
+  padding: 16px 50px;
+  border-radius: 50px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(255,51,102,0.6);
+  transition: all 0.2s;
+  width: 100%;
+  max-width: 300px;
+}
+
+.send-btn:active { transform: scale(0.96); }
+.send-btn:disabled { 
+  opacity: 0.4; 
+  cursor: not-allowed; 
+  transform: none;
+}
