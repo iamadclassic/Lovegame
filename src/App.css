@@ -1,0 +1,181 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { 
+  background:#000; 
+  color:#fff; 
+  font-family:Arial, sans-serif; 
+  min-height:100vh;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* JOIN SCREEN — NOW MOBILE PERFECT */
+.join {
+  display:flex; 
+  flex-direction:column; 
+  align-items:center; 
+  justify-content:center;
+  min-height:100vh; 
+  gap:28px;
+  padding:20px;
+  background: linear-gradient(135deg, #1a0000, #000);
+}
+
+.join input {
+  padding:18px; 
+  width:88%; 
+  max-width:380px; 
+  border-radius:20px; 
+  border:none; 
+  font-size:1.35rem; 
+  text-align:center;
+  background:rgba(255,255,255,0.12);
+  color:white;
+}
+
+.join button {
+  padding:18px 60px; 
+  background:#ff3366; 
+  border:none; 
+  border-radius:50px; 
+  color:white; 
+  font-size:1.7rem; 
+  font-weight:bold;
+  cursor:pointer;
+  box-shadow:0 10px 30px rgba(255,51,102,0.5);
+  transition:transform 0.2s;
+}
+.join button:active { transform:scale(0.95); }
+
+/* MAIN GAME — FULL MOBILE LAYOUT */
+.container { 
+  padding:15px 20px; 
+  text-align:center; 
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  background: linear-gradient(135deg, #0f0f0f, #1a0000);
+}
+
+h1 { 
+  color:#ff3366; 
+  font-size:2.4rem; 
+  margin:15px 0 8px;
+  font-weight:bold;
+}
+
+.status { 
+  color:#ff6699; 
+  font-weight:bold; 
+  font-size:1.1rem;
+  min-height:26px;
+  font-style:italic;
+}
+
+/* SPINNING WHEEL — RESPONSIVE ON ALL PHONES */
+.wheel { 
+  width:86vw; 
+  height:86vw; 
+  max-width:380px; 
+  max-height:380px; 
+  margin:30px auto; 
+  perspective:1200px; 
+  cursor:pointer;
+}
+
+.card {
+  width:100%; 
+  height:100%; 
+  background:linear-gradient(135deg,#ff3366,#c21500);
+  border-radius:35px; 
+  display:flex; 
+  align-items:center; 
+  justify-content:center;
+  padding:22px; 
+  font-size:1.35rem; 
+  font-weight:bold; 
+  color:white;
+  box-shadow:0 20px 50px rgba(255,51,102,0.6);
+  text-align:center;
+  word-break:break-word;
+  line-height:1.4;
+}
+
+.card.spinning {
+  animation: spin 2.4s cubic-bezier(0.2,0.8,0.2,1);
+}
+@keyframes spin {
+  from { transform:rotateY(0deg); }
+  to { transform:rotateY(720deg); }
+}
+
+/* YOUR FAVORITE RED BUTTON — EXACTLY AS YOU WROTE */
+.spin-btn {
+  background:#ff3366; 
+  color:white; 
+  border:none; 
+  padding:18px 50px;
+  font-size:1.8rem; 
+  border-radius:50px; 
+  cursor:pointer; 
+  margin:25px auto;
+  display:block;
+  font-weight:bold;
+  box-shadow:0 10px 30px rgba(255,51,102,0.5);
+  transition:all 0.3s;
+}
+.spin-btn:active { transform:scale(0.96); }
+.spin-btn:disabled { opacity:0.6; cursor:not-allowed; }
+
+/* ANSWERS — MOBILE FRIENDLY */
+.answers { 
+  flex:1;
+  max-width:700px; 
+  margin:0 auto 20px; 
+  display:flex; 
+  flex-direction:column; 
+  gap:22px;
+}
+
+.box { 
+  background:rgba(255,255,255,0.1); 
+  padding:18px; 
+  border-radius:18px;
+  backdrop-filter:blur(8px);
+}
+
+.box strong {
+  color:#ff6699;
+  font-size:1.2rem;
+  display:block;
+  margin-bottom:10px;
+}
+
+.box textarea {
+  width:100%; 
+  height:130px; 
+  background:transparent; 
+  border:none; 
+  color:white;
+  font-size:1.15rem; 
+  resize:none; 
+  margin-top:8px;
+  outline:none;
+}
+
+.partner { 
+  background:rgba(255,51,102,0.2); 
+}
+
+/* MOBILE TWEAKS — KEEPS YOUR ORIGINAL STYLE */
+@media (max-width:480px) {
+  h1 { font-size:2rem; }
+  .join input { font-size:1.25rem; padding:16px; }
+  .wheel { width:82vw; height:82vw; }
+  .card { font-size:1.25rem; padding:18px; }
+  .spin-btn { font-size:1.7rem; padding:16px 45px; }
+  .box textarea { height:120px; font-size:1.1rem; }
+}
+
+@media (max-width:360px) {
+  .wheel { width:78vw; height:78vw; }
+  .card { font-size:1.15rem; }
+}
