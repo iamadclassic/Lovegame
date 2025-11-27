@@ -7,8 +7,8 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* JOIN SCREEN — NOW MOBILE PERFECT */
-.join {
+/* JOIN SCREEN — GORGEOUS */
+.join-screen {
   display:flex; 
   flex-direction:column; 
   align-items:center; 
@@ -19,7 +19,15 @@ body {
   background: linear-gradient(135deg, #1a0000, #000);
 }
 
-.join input {
+.join-screen h1 {
+  font-size:3.8rem;
+  background:linear-gradient(45deg,#ff3366,#ff6699);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  font-weight:bold;
+}
+
+.join-screen input {
   padding:18px; 
   width:88%; 
   max-width:380px; 
@@ -29,48 +37,47 @@ body {
   text-align:center;
   background:rgba(255,255,255,0.12);
   color:white;
+  backdrop-filter:blur(10px);
 }
 
-.join button {
+.join-screen button {
   padding:18px 60px; 
   background:#ff3366; 
   border:none; 
   border-radius:50px; 
   color:white; 
-  font-size:1.7rem; 
+  font-size:1.8rem; 
   font-weight:bold;
   cursor:pointer;
   box-shadow:0 10px 30px rgba(255,51,102,0.5);
-  transition:transform 0.2s;
 }
-.join button:active { transform:scale(0.95); }
+.join-screen button:active { transform:scale(0.95); }
 
-/* MAIN GAME — FULL MOBILE LAYOUT */
-.container { 
-  padding:15px 20px; 
-  text-align:center; 
+/* MAIN GAME — SEXY MOBILE LAYOUT */
+.mobile-container { 
   min-height:100vh;
   display:flex;
   flex-direction:column;
+  padding:15px 20px;
   background: linear-gradient(135deg, #0f0f0f, #1a0000);
+  text-align:center;
 }
 
-h1 { 
+.header h1 { 
   color:#ff3366; 
-  font-size:2.4rem; 
-  margin:15px 0 8px;
+  font-size:2.6rem; 
+  margin:10px 0;
   font-weight:bold;
 }
 
-.status { 
+.room-code { 
   color:#ff6699; 
-  font-weight:bold; 
-  font-size:1.1rem;
-  min-height:26px;
-  font-style:italic;
+  font-weight:bold;
+  font-size:1.2rem;
+  margin-bottom:20px;
 }
 
-/* SPINNING WHEEL — RESPONSIVE ON ALL PHONES */
+/* SPINNING WHEEL — PERFECT */
 .wheel { 
   width:86vw; 
   height:86vw; 
@@ -89,14 +96,14 @@ h1 {
   display:flex; 
   align-items:center; 
   justify-content:center;
-  padding:22px; 
-  font-size:1.35rem; 
+  padding:24px; 
+  font-size:1.4rem; 
   font-weight:bold; 
   color:white;
-  box-shadow:0 20px 50px rgba(255,51,102,0.6);
+  box-shadow:0 20px 50px rgba(255,51,102,0.7);
   text-align:center;
   word-break:break-word;
-  line-height:1.4;
+  line-height:1.5;
 }
 
 .card.spinning {
@@ -107,75 +114,66 @@ h1 {
   to { transform:rotateY(720deg); }
 }
 
-/* YOUR FAVORITE RED BUTTON — EXACTLY AS YOU WROTE */
+/* YOUR FAVORITE RED SPIN BUTTON */
 .spin-btn {
   background:#ff3366; 
   color:white; 
   border:none; 
   padding:18px 50px;
-  font-size:1.8rem; 
+  font-size:1.9rem; 
   border-radius:50px; 
   cursor:pointer; 
-  margin:25px auto;
+  margin:30px auto;
   display:block;
   font-weight:bold;
-  box-shadow:0 10px 30px rgba(255,51,102,0.5);
-  transition:all 0.3s;
+  box-shadow:0 10px 30px rgba(255,51,102,0.6);
 }
 .spin-btn:active { transform:scale(0.96); }
 .spin-btn:disabled { opacity:0.6; cursor:not-allowed; }
 
-/* ANSWERS — MOBILE FRIENDLY */
-.answers { 
+/* ANSWERS — BEAUTIFUL BOXES */
+.answers-section { 
   flex:1;
-  max-width:700px; 
-  margin:0 auto 20px; 
   display:flex; 
   flex-direction:column; 
   gap:22px;
+  margin-bottom:20px;
 }
 
-.box { 
+.answer-box {
   background:rgba(255,255,255,0.1); 
-  padding:18px; 
-  border-radius:18px;
-  backdrop-filter:blur(8px);
+  padding:20px; 
+  border-radius:20px;
+  backdrop-filter:blur(10px);
 }
 
-.box strong {
+.answer-box strong {
   color:#ff6699;
-  font-size:1.2rem;
+  font-size:1.3rem;
   display:block;
-  margin-bottom:10px;
+  margin-bottom:12px;
 }
 
-.box textarea {
+.answer-box textarea {
   width:100%; 
-  height:130px; 
+  height:140px; 
   background:transparent; 
   border:none; 
   color:white;
-  font-size:1.15rem; 
+  font-size:1.2rem; 
   resize:none; 
-  margin-top:8px;
   outline:none;
 }
 
-.partner { 
-  background:rgba(255,51,102,0.2); 
+.answer-box.partner {
+  background:rgba(255,51,102,0.25);
 }
 
-/* MOBILE TWEAKS — KEEPS YOUR ORIGINAL STYLE */
+/* MOBILE PERFECTION */
 @media (max-width:480px) {
-  h1 { font-size:2rem; }
-  .join input { font-size:1.25rem; padding:16px; }
+  .header h1 { font-size:2.2rem; }
   .wheel { width:82vw; height:82vw; }
-  .card { font-size:1.25rem; padding:18px; }
+  .card { font-size:1.25rem; padding:20px; }
   .spin-btn { font-size:1.7rem; padding:16px 45px; }
-  .box textarea { height:120px; font-size:1.1rem; }
-}
-
-@media (max-width:360px) {
-  .wheel { width:78vw; height:78vw; }
-  .card { font-size:1.15rem; }
+  .answer-box textarea { height:120px; }
 }
